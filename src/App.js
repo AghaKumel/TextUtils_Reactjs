@@ -30,14 +30,14 @@ function App() {
       document.body.style.backgroundColor='white'
       setMode('light');
       showAlert('Light mode has been Enabled','success');
-      document.title="TextUtils- Light Mode";
+      // document.title="TextUtils- Light Mode";
     }
     else
     {
       document.body.style.backgroundColor='#124e65'
       setMode('dark');
       showAlert('Dark mode has been Enabled','success');
-      document.title="TextUtils- Dark Mode";
+      // document.title="TextUtils- Dark Mode";
     }
   }
   return (

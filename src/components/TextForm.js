@@ -18,16 +18,16 @@ export default function TextForm(props) {
         setText(event.target.value)
     }
     const [text,setText]=useState('Enter Text here')
-    const handlelen=(word)=>{
-        if(word===0)
-        {
-            return 0;
-        }
-        else 
-        {
-            return text.split(" ").length;
-        }
-    }
+    // const handlelen=(word)=>{
+    //     if(word===0)
+    //     {
+    //         return 0;
+    //     }
+    //     else 
+    //     {
+    //         return text.split(" ").length;
+    //     }
+    // }
     // setText("new text");
   return (
     <>
@@ -42,7 +42,7 @@ export default function TextForm(props) {
         </div>
         <div className="container my-2" style={{color:props.mode==='light'?'black':'white'}}>
             <h1>Your Text summary</h1>
-            <p>{handlelen(text.length)} words and {text.length} characters</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
         </div>
     </>
   ) 
